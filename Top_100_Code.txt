@@ -1,0 +1,1802 @@
+1.Positive and Negative Number
+
+#include<iostream>
+using namespace std;
+int main(){
+    int no;
+    cin>>no;
+    if(no > 0){
+        cout<<"Positive Number";
+    }
+    else{
+        cout<<"Negative Number";
+    }
+}
+__________________________________________________
+2.Even or Odd Number
+
+#include<iostream>
+using namespace std;
+int main(){
+    int no;
+    cin>>no;
+    if(no%2==0){
+        cout<<"Even Number";
+    }
+    else{
+        cout<<"Odd Number";
+    }
+}
+
+________________________________________________________
+3.Sum of First N Natural Number
+
+#include<iostream>
+using namespace std;
+int main(){
+    int no,sum=0;
+    cout<<"Enter the First N natural Number";
+    cin>>no;
+    for (int i=1;i<=no;i++){
+        sum=sum + i;
+    }
+    cout<<sum;
+    return 0;
+}
+_____________________________________________________________
+4.Sum of N natural Number.
+
+#include<iostream>
+using namespace std;
+int main(){
+    int no,sum=0;
+    cout<<"Enter the First N natural Number";
+    cin>>no;
+    for (int i=1;i<=no;i++){
+        sum=sum + i;
+    }
+    cout<<sum;
+    return 0;
+}
+_________________________________________________________________
+5.Sum of the Number in Given range
+
+#include<iostream>
+using namespace std;
+int main(){
+    int start,end,sum=0;
+    cout<<"Enter the First Number";
+    cin>>start;
+    cout<<"Enter the Last Number";
+    cin>>end;
+    for (int i=start;i<=end;i++){
+        sum=sum + i;
+    }
+    cout<<sum;
+    return 0;
+}
+
+_______________________________________________________________________
+6.Find the greatest of 2 Number
+
+#include<iostream>
+using namespace std;
+int main(){
+    int start,end;
+    cout<<"Enter the First Number";
+    cin>>start;
+    cout<<"Enter the Last Number";
+    cin>>end;
+    if(start > end)
+    cout<<start;
+    else
+    cout<<end;
+    return 0;
+}
+_________________________________________________________________________
+7.Find the greatest of 3 Number
+
+#include<iostream>
+using namespace std;
+int main(){
+    int start,end,mid;
+    cout<<"Enter the First Number";
+    cin>>start;
+    cout<<"Enter the second Number";
+    cin>>end;
+    cout<<"Enter the Third Number";
+    cin>>mid;
+    if(start > end){
+        if(start > mid)
+        cout<<start;
+        else
+        cout<<mid;
+    }
+    else{
+        if(end > mid)
+        cout<<end;
+        else
+        cout<<mid;
+    
+    }
+    return 0;
+}
+
+_________________________________________________________________
+8.Leap year or not
+
+#include<iostream>
+using namespace std;
+int main(){
+    int year;
+    cout<<"Enter year: ";
+    cin>>year;
+    if(year % 4==0)
+    cout<<year<<"  is Leap year";
+    else
+    cout<<year<<"  Not leap Year";   
+    return 0;
+}
+
+___________________________________________________________________
+9.Prime Number or Not
+
+ #include<iostream>
+using namespace std;
+int main(){
+    int num,rem,count=0;
+    cin>>num;
+    for(int i=1;i<=num;i++){
+        rem=num%i;
+        if(rem==0){
+            count++;
+        }
+    }
+    if(count==2){
+        cout<<"Prime Number";
+    }  
+    else
+    cout<<"Not Prime Number"; 
+    return 0;
+}
+
+_______________________________________________________________________
+10. Prime Number within a range
+
+#include<iostream>
+using namespace std;
+void prime(int num){
+    int count=0;
+    for(int i=1;i<=num;i++){
+        if(num%i==0)
+        count++;
+    }
+    if(count==2)
+    cout<<num<<endl;
+
+}
+int main(){
+    int num1,num2;
+    cout<<"Enter Lowerlimit and Upperlimit Number";
+    cin>>num1>>num2;
+    for(int i=num1;i<=num2;i++)
+    prime(i);
+    return 0;
+}
+
+_______________________________________________________________________
+11.Sum of Digit of Number
+
+#include<iostream>
+using namespace std;
+int main(){
+    int num,sum=0;
+    cin>>num;
+    do
+    {
+        sum+=num%10;
+        num=num/10;
+        
+    } while (num!=0);
+    
+    cout<<sum;
+}
+_________________________________________________________________________
+12.Reverse of Number
+
+#include<iostream>
+using namespace std;
+int main(){
+    int num,rem,rev=0;
+    cin>>num;
+    do{
+        rem=num%10;
+        rev=rev*10+rem;
+        num=num/10;
+    }while (num!=0);
+    
+    cout<<rev;
+    return 0;
+}
+_______________________________________________________________________
+13. Palindrome Number
+
+#include<iostream>
+using namespace std;
+int main(){
+    int num,org,rem,rev=0;
+    cin>>num;
+    org=num;
+    do{
+        rem=num%10;
+        rev=rev*10+rem;
+        num=num/10;
+    }while (num!=0);
+    if (rev==org)
+    {
+        cout<<"Palindrome number";
+    }
+    else
+    cout<<"Not palindrome Number";
+    
+    return 0;
+}
+_____________________________________________________________________
+14.Armstrong Number
+
+#include<iostream>
+using namespace std;
+int main(){
+    int num,org,rem,sum=0;
+    cin>>num;
+    org=num;
+    while (num>0)
+    {
+        rem=num%10;
+        rem=rem*rem*rem;
+        sum=sum+rem;
+        num=num/10;
+    }
+    if (sum==org)
+    {
+        cout<<"Armstrong Number";
+    }
+    else
+    cout<<"Not Armstrong Number";
+    
+    
+    
+}
+__________________________________________________________________
+15.Armstrong Number In given range 
+
+#include<iostream>
+using namespace std;
+void armstong(int num){
+    int org,rem,sum=0;
+    org=num;
+    while (num>0)
+    {
+        rem=num%10;
+        rem=rem*rem*rem;
+        sum=sum+rem;
+        num=num/10;
+    }
+    if (sum==org)
+    {
+        cout<<sum<<endl;
+    }
+}
+int main(){
+    int num1,num2;
+    cin>>num1>>num2;
+    for (int i=num1;i<=num2;i++)
+    armstong(i);
+
+}
+
+__________________________________________________________________
+16.fibonaccis series upto nth term
+
+#include<iostream>
+using namespace std;
+int fib(int n){
+    if(n==1 || n==2){
+       return 1;
+    }
+    return(fib(n-1)+fib(n-2));
+}
+int main(){
+    int num;
+    cin>>num;
+    for (int i = 1; i <=num; i++)
+    {
+        cout<<fib(i)<<" ";
+    }
+    return 0;
+}
+____________________________________________________________________
+17.Factorial of Number
+
+#include<iostream>
+using namespace std;
+int main(){
+    int num,fact=1;
+    cin>>num;
+    for (int i = 1; i <=num; i++)
+    {
+        fact=fact*i;
+    }
+    cout<<fact;
+    
+}
+_____________________________________________________________________
+18.Power of Number
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    int base,index,result;
+    cin>>base;
+    cin>>index;
+    result=pow(base,index);
+    cout<<result;    
+}
+__________________________________________________________________
+19.Factor of Number
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    int num;
+    cin>>num;
+    for (int i = 1; i <= num; i++)
+    {
+        if(num%i==0){
+            cout<<i;
+        }
+    }
+    return 0;
+        
+}
+_____________________________________________________________________
+20. Strong Number: Strong Number is a number in which the sum of the
+factorial of individual digits of the number is equal to the Number itself.
+ex-145
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    int num,org,rem,sum=0;
+    cin>>num;
+    org=num;
+    while (num >0)
+    {
+        int fact=1;
+        rem=num%10;
+        for (int j =rem; j>0; j--)
+        {
+            fact=fact*j;
+
+        }
+        sum=sum+fact;
+        num=num/10;
+    }
+    if (sum==org){
+        cout<<"Strong Number";
+    }
+    else
+    cout<<"Not Strong Number";
+    
+    return 0;
+        
+}
+_________________________________________________________________
+21.Perfect Number
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    int num,org,rem,sum=0;
+    cin>>num;
+    org=num;
+    for (int i = 1; i < num; i++)
+    {
+        rem=num%i;
+        if(rem==0){
+            sum=sum+i;
+        }
+    }
+    if (sum==org)
+    {
+       cout<<"Perfect Number";
+    }
+    else
+    cout<<"Not Perfect Number";
+    return 0;
+        
+}
+_____________________________________________________________________
+22.Automorphic Number: Is a Number whose square ends with the same Digit Number.
+ex- 5 25,6 36,25 625.
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    int n,s,flag=0;
+    cin>>n;
+    int org=n;
+    s=n*n;
+    while (n>0)
+    {
+        if (n%10==s%10)
+        {
+            flag=1;
+            break;
+        }
+        n=n/10;
+        s=s/10;
+        
+    }
+    if (flag==1)
+    cout<<"Automorphic Number";
+    else
+    cout<<"Not Automorphic Number";
+    return 0;           
+}
+_______________________________________________________________________
+23. Harshad Number : A harshad Number is a Positive Integer which is divisible 
+by the sum of the digits of the integer. it is also called the Niven Number.
+
+ex- 81,21,153
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    int num,org,rem,sum=0;
+    cin>>num;
+    org=num;
+    while (num > 0)
+    {
+        rem=num%10;
+        sum=sum+rem;
+        num=num/10;
+    }
+    if (num %sum==0)
+    {
+        cout<<"Harshad Number";
+    }
+    else
+    cout<<"Not Harshad Number";
+    
+    
+
+    return 0;           
+}
+________________________________________________________________
+24. Abundant Number : Is an Number in which the sum of the proper divisor 
+of the number is greater than the number itself.
+ex- 12 
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    int num,rem,sum=0;
+    cin>>num;
+    for(int i=1;i<num;i++){
+        rem=num%i;
+        if(rem==0){
+            sum=sum+i;
+        }
+    }
+    if(sum > num )
+    cout<<"Abundant Number";
+    else
+    cout<<"Not Abundant Number";
+    return 0;           
+}
+____________________________________________________________________
+25. Friendly Pair (Amicable Number or Not):
+WAP to check whether two numbers are friendly pair or not
+
+Friendly pair are the two different numbers related in a way such that the sum of the
+proper divisors of each is equal to the other number. A proper divisor is a positive 
+factor of that number other than number itself.
+for ex- 
+                  220              |         224
+Divisor - 1,2,4,5,10,11,20,22,44,     1,2,4,71 and 142
+          55 and 110
+
+
+Sum     -   284                    | 220
+
+(220 and 284 are amicable Number "Sum of Divisors is equal to th other number")
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    int n1,n2,rem,sum=0,sum1=0;
+    cin>>n1;
+    cin>>n2;
+    for(int i=1;i<n1;i++){
+        rem=n1%i;
+        if(rem==0){
+            sum=sum+i;
+        }
+    }
+    for(int j=1;j<n2;j++){
+        rem=n2%j;
+        if(rem==0){
+            sum1=sum1+j;
+        }
+    }
+    if(n1==sum1 && n2==sum)
+    cout<<"Friendly Pair("<<n1<<","<<n2<<")";
+    else
+    cout<<"Not Friendly Pair";           
+}
+
+******************************************************************************************************
+26.C++ program to find the GCD or HCF of two numbers
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    int x ,y ,a,b,t,gcd;
+    cin>>x;
+    cin>>y;
+    a=x;
+    b=y;
+    while (b!=0)
+    {
+        t=b;
+        b=a%b;
+        a=t;
+    }
+    gcd=a;
+    cout<<gcd;
+    return 0;   
+}
+_______________________________________________________________________________
+27. C++ Program to find the LCM of two numbers (Lowest common multiple)
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    int x ,y ,a,b,t,gcd,lcm;
+    cin>>x;
+    cin>>y;
+    a=x;
+    b=y;
+    while (b!=0)
+    {
+        t=b;
+        b=a%b;
+        a=t;
+    }
+    gcd=a;
+    lcm=(x*y)/gcd;
+    cout<<lcm;
+    return 0;   
+}
+____________________________________________________________________________________
+28. Greatest Common Divisor :
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    int x ,y ,a,b,t,gcd;
+    cin>>x;
+    cin>>y;
+    a=x;
+    b=y;
+    while (b!=0)
+    {
+        t=b;
+        b=a%b;
+        a=t;
+    }
+    gcd=a;
+    cout<<gcd;
+    return 0;   
+}
+______________________________________________________________________________________
+29.Binary to Decimal to conversion
+
+#include<iostream>
+using namespace std;
+int main(){
+    int num,b,d=0,r,base=1;
+    cin>>num;
+    b=num;
+    while(num>0){
+        r=num%10;
+        d=d+r*base;
+        num=num/10;
+        base=base*2;
+    }
+    cout<<d;
+    return 0;
+}
+____________________________________________________________________________________
+30.Binary to Octal conversion :
+
+#include<iostream>
+using namespace std;
+int main(){
+    long b_num,d=0,octal=0,r,base=1;
+    cin>>b_num;
+    //coverting binary to decimal
+    while(b_num > 0){
+        r=b_num%10;
+        d=d+r*base;
+        base=base*2;
+        b_num=b_num/10;
+        
+    }
+    //coverting decimal to octal
+    int base1=1;
+        //converting decimal to octal
+        while (d > 0)
+        {
+            r = d % 8;
+            octal += r * base1;
+            d /= 8;
+            base1 *= 10;
+        }
+    cout<<octal;
+    return 0;
+}
+_____________________________________________________________________________________
+31.Decimal to Binary conversion:
+
+#include<iostream>
+using namespace std;
+int main(){
+    int d,rem,base=1;
+    long binary=0;
+    cin>>d;
+    while(d >0){
+        rem=d%2;
+        binary=binary+rem*base;
+        base=base*10;
+        d=d/2;
+    }
+    cout<<binary;
+}
+
+_____________________________________________________________________________________
+32.Decimal to octal Conversion:
+
+#include<iostream>
+using namespace std;
+int main(){
+    int d,rem,base=1;
+    long octal=0;
+    cin>>d;
+    while(d >0){
+        rem=d%8;
+        octal=octal+rem*base;
+        base=base*10;
+        d=d/8;
+    }
+    cout<<octal;
+    return 0;
+}
+______________________________________________________________________________________
+33.Octal to Binary conversion : 
+
+#include<iostream>
+using namespace std;
+int main(){
+    int octal;
+    long binary=0;
+    int d=0,rem,base=1;
+    cin>>octal;
+    //coverting octal to decimal
+    while(octal >0){
+        rem=octal%10;
+        d=d+rem*base;
+        base=base*8;
+        octal=octal/10;
+    }
+    int base1=1;
+    while (d>0)
+    {
+        rem=d%2;
+        binary=binary+rem*base1;
+        base1=base1*10;
+        d=d/2;
+        /* code */
+    }
+    
+    cout<<binary;
+    return 0;
+}
+______________________________________________________________________________________
+34.Octal to Decimal conversion :
+
+#include<iostream>
+using namespace std;
+int main(){
+    int octal;
+    int d=0,rem,base=1;
+    cin>>octal;
+    //coverting octal to decimal
+    while(octal >0){
+        rem=octal%10;
+        d=d+rem*base;
+        base=base*8;
+        octal=octal/10;
+    }
+    cout<<d;
+    return 0;
+}
+_________________________________________________________________________
+35.Quadrants in which a given coordinate lies :
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    int x,y;
+    cin>>x;
+    cin>>y;
+    if(x==0)
+    cout<<"x and Y Lies on Y axis";
+    else if(y==0)
+    cout<<"x and Y lies on x axis";
+    else if(x >0 && y>0)
+    cout<<"x and Y lies on 1st Quadrant";
+    else if(x<0 && y>0)
+    cout<<"X and Y lies on 2nd Quadrant";
+    else if(x<0 && y<0)
+    cout<<"X and Y lies on 3rd Quadrant";
+    else if(x>0 && y<0)
+    cout<<"X and Y lies on 4th Quadrant";
+    else
+    cout<<"x and y lies on Origin";
+    return 0;   
+}
+____________________________________________________________________________
+36.Permutations in which n people can occupy r seats in a classroom :
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+int factorial(int n){
+    int fact=1;
+    for(int i=1;i<=n;i++){
+        fact=fact*i;
+    }
+    return(fact);
+}
+int main(){
+    int num,r,permutation;
+    cin>>num>>r;
+    permutation=factorial(num)/factorial(num-r);
+    cout<<permutation;
+    return 0;   
+}
+___________________________________________________________________________
+37. Maximum number of handshakes:
+
+Algorithm:-
+User gives an input(number of people).
+The input is stored in an int type variable say p.
+By using the formula the maximum number of handshakes between p people are found
+and stored in another variable say max.
+int max=p*(p-1)/2;
+max is printed as output.
+
+#include<iostream>
+using namespace std;
+int main(){
+    int p,max;
+    cin>>p;
+    max=p*(p-1)/2;
+    cout<<max;
+    return 0;   
+}
+_______________________________________________________________________________
+38.Addition of two fractions:
+
+#include<iostream>
+using namespace std;
+int main(){
+    int num1,den1,numerator,denominator,sum;
+    cin>>num1>>den1;
+    int num2,den2; 
+    cin>>num2>>den2;
+    numerator=(num1*den2)+(num2*den1);
+    denominator=(den1*den2);
+    cout<<numerator<<"/"<<denominator; 
+}
+__________________________________________________________________________________
+39.Replace all 0’s with 1 in a given integer : 
+
+#include<iostream>
+using namespace std;
+int main(){
+    int num,num2=0,rem;
+    cin>>num;
+    while(num>0){
+        rem=num%10;
+        if(rem==0)
+        rem=1;
+        num=num/10;
+        num2=num2*10+rem;
+    }
+    cout<<num2;
+}
+______________________________________________________________________________
+40.Can a number be expressed as a sum of two prime numbers :
+
+Take number as input from user.
+Input is stored in an int type variable say num 
+A loop is started from i = 1 and will work till  i <= num/2
+Every value of i is checked for being a prime number.
+If i is a prime number then num – i is checked for being a prime.
+If both are prime then print the result
+Otherwise num cannot be expressed as a sum of two prime numbers.
+
+#include<iostream>
+using namespace std;
+int Prime(int num)
+{
+    int count=0;
+    for(int i=1;i<=num;i++)
+    {
+        if(num%i==0)
+            count++; 
+    }               
+    if(count==2)
+        return 1;
+    return 0;
+}
+
+int main(){
+    int check = 0,n;
+    cout<<"Enter a positive integer:";
+    cin>>n;
+    for(int i = 1; i <= n/2;i++)
+    {
+        if(Prime(i)){
+            if(Prime(n-i)){
+                cout<<i<<" + "<<n-i;
+                check = 1;
+            }
+        }    
+    }
+    if (check == 0)
+    cout<<n<<"cannot be expressed as the sum of two prime numbers.";
+    return 0;
+}
+_____________________________________________________________________________
+41.Check whether a character is a vowel or consonant : 
+
+#include<iostream>
+using namespace std;
+int main(){
+    char a;
+    cin>>a;
+    if(a=='a' || a=='e' || a=='i'|| a=='o' || a=='u' || a=='A' || a=='E' || a=='I'|| a=='O' || a=='U'){
+        cout<<a<<" is Vowel";
+    }
+    else
+    cout<<a<<" is Consonant";
+    return 0;
+}
+_____________________________________________________________________________________
+42.Check whether a character is a alphabet or not 
+
+#include<iostream>
+using namespace std;
+int main(){
+    char a;
+    cin>>a;
+    if(a>=65 && a<=90 || a>=97 && a<=122){
+        cout<<a<<" is Alphabet";
+    }
+    else
+    cout<<a<<" is Not alphabet";
+    return 0;
+}
+____________________________________________________________________________________
+43.Calculate the area of a circle :
+
+#include<iostream>
+using namespace std;
+int main(){
+    float PI=3.14;
+    float AOC,r;
+    cin>>r;
+    AOC=PI*r*r;
+    cout<<AOC;
+    return 0;
+}
+________________________________________________________________________________
+44.Find the ASCII value of a character :
+
+Did You Know:
+ASCII or American Standard Code for Information Interchange is a binary code which is used by electronic equipment for electronic communications . A total of 128 character have been assigned values from 0-127
+Between 65 to 90 and between 97 to 122 for Alphabets.
+Between 48 to 57 for Digits.
+All remaining for other characters.
+
+#include<iostream>
+using namespace std;
+int main(){
+    char a;
+    cin>>a;
+    cout<<a<<" ASCII is "<<(int)a;
+    return 0;
+}
+__________________________________________________________________________________
+45.Find the prime numbers between 1 to 100 :
+
+#include<iostream>
+using namespace std;
+int Prime(int num){
+    int rem,count=0;
+    for(int i=1;i<=num;i++){
+        rem=num%i;
+        if(rem==0)
+        {
+            count++;
+        }
+    }
+    if(count==2)
+        cout<<num<<" ";
+}
+int main(){
+    int n;
+    cin>>n;
+    for(int i=1;i<=n;i++){
+        Prime(i);
+    }
+    return 0;
+}
+____________________________________________________________________________________
+46.Calculate the number of digits in an integer :
+
+#include<iostream>
+using namespace std;
+int main(){
+    int num,rem,count=0;
+    cin>>num;
+    while (num > 0)
+    {
+        if(rem=num%10){
+            count++;
+        }
+        num=num/10;
+    }
+    cout<<count; 
+    return 0;
+}
+__________________________________________________________________________________
+48.Counting number of days in a given month of a year:
+
+#include<iostream>
+using namespace std;
+int main(){
+    int month,year;
+    cin>>month>>year;
+    if(month==2 && (year%4==0))
+    cout<<"29";
+    else if(month==2)
+    cout<<"28";
+    else if(month==1 || month==3 || month==5 || month==7 || month==8 || month==10 || month==12)
+    cout<<"31";
+    else
+    cout<<"30";
+    return 0;
+}
+___________________________________________________________________________________
+49.Finding Number of times x digit occurs in a given input :
+
+#include<iostream>
+using namespace std;
+int main(){
+   int no,digit,count=0;
+   cin>>no>>digit;
+   while (no)
+   {
+       int k=no%10;
+       no=no/10;
+       if (k==digit)
+       {
+           count++;
+       }
+   }
+   cout<<count;
+    return 0;
+}
+________________________________________________________________________________
+50. Duck Number : the number in between zero is present.
+
+#include<iostream>
+using namespace std;
+int main(){
+   int no,rem,count=0;
+   cin>>no;
+   while (no>0)
+   {
+       rem=no%10;
+       no=no/10;
+       if (rem==0){
+           count=1;
+       }
+       else{
+        cout<<"Not Duck Number";
+        break;
+       }
+   }
+    return 0;
+}
+
+***************************************************************************************************
+                                Important Codes related to Arrays
+***************************************************************************************************
+51.Smallest Element in an array using C++
+
+#include<iostream>
+using namespace std;
+int main(){
+   int size,temp;
+   cin>>size;
+   int a[size];
+   for (int i=0;i<size;i++){
+       cin>>a[i];
+   }
+   int small=a[0];
+   for(int i=1;i<size;i++){
+       if(a[i]<small){
+           small=a[i];
+       }
+   }
+   cout<<"The Smallest value of an array is "<<small;
+    return 0;
+}
+_________________________________________________________________________________
+52. Find Second Smallest Element in an Array :
+
+#include<iostream>
+using namespace std;
+int main(){
+   int size,temp;
+   cin>>size;
+   int a[size];
+   for (int i=0;i<size;i++){
+       cin>>a[i];
+   }
+   for(int i=0;i<size;i++){
+       for(int j=i+1;j<size;j++){
+           if(a[i]>a[j]){
+               temp=a[i];
+               a[i]=a[j];
+               a[j]=temp;
+           }
+       }   
+   }
+   cout<<"The Second Smallest Element of an array"<<a[1];
+   return 0;
+}
+_____________________________________________________________________________________
+53. Find Largest element in an array :
+
+#include<iostream>
+using namespace std;
+int main(){
+   int size,temp;
+   cin>>size;
+   int a[size];
+   for (int i=0;i<size;i++){
+       cin>>a[i];
+   }
+   int large=a[0];
+   for(int i=1;i<size;i++){
+       if(a[i]>large)
+       large=a[i];     
+   }
+   cout<<"The Largest Element of an array"<<large;
+   return 0;
+}
+________________________________________________________________________________________
+54.Find the Smallest and largest element in an array :
+
+#include<iostream>
+using namespace std;
+int main(){
+   int size,temp;
+   cin>>size;
+   int a[size];
+   for (int i=0;i<size;i++){
+       cin>>a[i];
+   }
+   int large=a[0];
+   for(int i=1;i<size;i++){
+       if(a[i]>large)
+       large=a[i];     
+   }
+   int small=a[0];
+   for(int i=1;i<size;i++){
+       if(a[i]<small)
+       small=a[i];     
+   }
+   cout<<"The Smallest and Largest Element of an array are  "<<small<<"  "<<large;
+   return 0;
+}
+____________________________________________________________________________________
+55.Calculate the sum of elements in an array :
+
+#include<iostream>
+using namespace std;
+int main(){
+   int size,sum=0;
+   cin>>size;
+   int a[size];
+   for (int i=0;i<size;i++){
+       cin>>a[i];
+   }
+   for(int i=0;i<size;i++){
+       sum=sum+a[i];  
+   }
+   cout<<"Sum of Element of an Array is: "<<sum;
+   return 0;
+}
+________________________________________________________________________________
+56. Reverse an Array :
+
+#include<iostream>
+using namespace std;
+int main(){
+   int size,rev;
+   cin>>size;
+   int a[size];
+   for (int i=0;i<size;i++){
+       cin>>a[i];
+   }
+   for(int i=0;i<size/2;i++){
+       rev=a[i];
+       a[i]=a[size-i-1];
+       a[size-i-1]=rev;
+   }
+   for (int i = 0; i < size; i++)
+   {
+       cout<<a[i]<<" ";
+   }
+   return 0;
+}
+____________________________________________________________________________________
+57.Sort first half in ascending order and second half in descending :
+
+#include<iostream>
+using namespace std;
+int main(){
+   int size,temp;
+   cin>>size;
+   int a[size];
+   for (int i=0;i<size;i++){
+       cin>>a[i];
+   }
+   cout<<"The Ascending Order of an array is : ";
+   for(int i=0;i<size-1;i++){
+       for(int j=i+1;j<size;j++){
+           if(a[i] > a[j]){
+               temp=a[i];
+               a[i]=a[j];
+               a[j]=temp;
+           }
+       }
+   }
+   cout<<"First Sorted array is";
+   for (int i = 0; i < size/2; i++)
+   {
+       cout<<a[i]<<" ";
+   }
+   cout<<"Second Sorted Array is: ";
+   for (int i =size-1; i >= size/2; i--)
+   {
+       cout<<a[i]<<" ";
+   }
+   return 0;
+}
+__________________________________________________________________________
+58.Sort the elements of an array :
+
+#include<iostream>
+using namespace std;
+int main(){
+   int size,temp;
+   cin>>size;
+   int a[size];
+   for (int i=0;i<size;i++){
+       cin>>a[i];
+   }
+   cout<<"The Ascending Order of an array is : ";
+   for(int i=0;i<size;i++){
+       for(int j=i+1;j<size;j++){
+           if(a[i] > a[j]){
+               temp=a[i];
+               a[i]=a[j];
+               a[j]=temp;
+           }
+       }
+   }
+   for (int i = 0; i < size; i++)
+   {
+       cout<<a[i]<<" ";
+   }
+    cout<<"Descending order of an array is: ";
+   for(int i=0;i<size;i++){
+       for(int j=i+1;j<size;j++){
+           if(a[i] < a[j]){
+               temp=a[i];
+               a[i]=a[j];
+               a[j]=temp;
+           }
+       }
+   }
+   for (int i = 0; i < size; i++)
+   {
+       cout<<a[i]<<" ";
+   }
+   return 0;
+}
+________________________________________________________________________________
+59.Finding the frequency of elements in an array : 
+
+#include<iostream>
+using namespace std;
+int main(){
+    int freq[100];
+    int size, i, j, count;
+    /* Input size of array */
+    cout << "Enter size of array: ";
+    cin >> size;
+    int arr[size];
+    /* Input elements  in array */
+    cout << "Enter elements in array: ";
+    for(i=0; i<size; i++){
+        cin >> arr[i];
+        /* Initially initialize frequencies to -1 */
+        freq[i] = -1;
+    }
+    for(i=0; i<size; i++){
+        count = 1;
+        for(j=i+1; j<size; j++){
+        /* If duplicate element is found */
+            if(arr[i]==arr[j]){
+                count++;
+                /* Make sure not to count frequency of same element again */        
+                freq[j] = 0;
+            }
+        }
+        /* If frequency of current element is not counted */
+        if(freq[i] =! 0){
+            freq[i] = count;
+        }
+    }
+    /* Print frequency of each element */
+    cout << "Frequency of all elements of array : ";
+    for(i=0; i<size; i++){
+        if(freq[i] != 0){
+            cout << arr[i] <<  "occurs " << freq[i] << "times " << endl;
+        }
+    }
+}
+_____________________________________________________________________________________
+60.Finding the Longest Palindrome in an Array
+
+#include<iostream>
+using namespace std;
+int main()  
+{
+    int n, i , j, temp, rem, num;
+    printf("enter size : ");
+    scanf("%d",&n);
+    int arr1[n];
+    printf("enter elements of array : ");
+    for(i=0; i<n; i++)
+    {
+        scanf("%d",&arr1[i]);
+    }
+    //sorting of array in ascending order
+    for(i=0; i<n; i++)
+    {
+        for(j=i+1; j<n; j++)
+        {
+           if(arr1[i]>arr1[j])
+            {
+                temp = arr1[i];
+                arr1[i] = arr1[j];
+                arr1[j] = temp;
+            }
+        }
+    }
+    for(i=n; i>=0; i--)
+    {
+        num = 0;
+        temp = arr1[i];
+        while(arr1[i] > 0)
+        {
+            rem = arr1[i] % 10;
+            num = num*10 + rem;
+            arr1[i] = arr1[i]/10;
+        }
+        if(num==temp)
+        {
+            printf("Longest palindrome present is %d",num);
+            break;
+        } 
+    }   
+    if(i==-1)
+    {
+            printf("There is no palindrom number");
+    }
+    return 0;
+} 
+
+_____________________________________________________________________________________________
+61.Counting Distinct Elements in an Array :
+
+#include <iostream>
+using namespace std;
+int countDistinct(int a[], int size){
+   int i, j, count = 1;
+   for (i = 1; i < size; i++){
+      for (j = 0; j < i; j++){
+         if (a[i] == a[j]){
+            break;
+         }
+      }
+      if (i == j){
+         count++;
+      }
+   }
+   return count;
+}
+// Main function
+int main(){
+   int a[] = { 3, 6, 5, 8, 2, 3, 4 };
+   int size = sizeof(a) / sizeof(a[0]);
+   cout << "count is "<<countDistinct(a, size);
+   return 0;
+}
+
+_____________________________________________________________________
+62.Finding  Repeating elements in an Array :
+
+#include <iostream>
+using namespace std;
+int main(){
+    int s;
+    cin>>s;
+    int a[s];
+    for(int i=0;i<s;i++){
+        cin>>a[i];
+    }
+    cout<<"Dublicate Element of an array is : ";
+    for(int i=0;i<s;i++){
+        for(int j=i+1;j<s;j++){
+            if(a[i]==a[j] && i!=j){
+                cout<<a[i]<<" ";
+            }
+        }
+    }
+    return 0;
+}
+___________________________________________________________________________
+63.Finding Non Repeating elements in an Array : 
+
+Algorithm
+Declare the array and input the array elements.
+Start traversing the array and check if the current element is already present in the array.
+If it is already present in the array, move to the next element in the array and continue.
+If not, output the element as the non-repeating element.
+
+#include <iostream>
+using namespace std;
+int main(){
+    int s;
+    cin>>s;
+    int a[s];
+    for(int i=0;i<s;i++){
+        cin>>a[i];
+    }
+    cout<<"Non Dublicate Element of an array is : ";
+    int i,j,count =1;
+    for(i=0;i<s;i++){
+        for(j=0;j<s;j++){
+            if(a[i]==a[j] && i!=j){
+                break;
+            }
+        }
+        if(j==s){
+                cout<<a[i]<<" ";
+                ++count;
+            }
+    }
+    return 0;
+}
+____________________________________________________________________________________
+64. Removing Duplicate elements from an array :
+
+#include <iostream>
+using namespace std;
+int main(){
+    int s;
+    cin>>s;
+    int a[s];
+    for(int i=0;i<s;i++){
+        cin>>a[i];
+    }
+    cout<<" Removing Dublicate Element of an array is : ";
+    int i,j,count =1;
+    for(i=0;i<s;i++){
+        for(j=i+1;j<s;j++){
+            if(a[i]==a[j] && i!=j){
+                break;
+            }
+        }
+        if(j==s){
+                cout<<a[i]<<" ";
+                ++count;
+            }
+    }
+    return 0;
+}
+
+**************************************************************************************************
+					Operations on Strings
+**************************************************************************************************
+65.C++ program for calculating the length of string without using length() function
+
+#include <iostream>
+using namespace std;
+int main(){
+    char s[100];
+    gets(s);
+    int l;
+    for(l=0;s[l]!='\0';l++);
+    cout<<"Length of the string is:  "<<l;
+    return 0;
+}
+
+_________________________________________________________________________________________
+66.C++ programming code to toggle each character in a string.
+
+#include <iostream>
+using namespace std;
+int main(){
+    char a[100];
+    gets(a);
+    for(int i=0;a[i]!='\0';i++){
+        if(a[i]>='a' && a[i]<='z')
+        a[i]=a[i] - 32;
+        else if(a[i]>='A' && a[i]<='Z')
+        a[i]=a[i] + 32;
+    }
+    for(int i=0;a[i]!='\0';i++){
+        cout<<a[i];
+    }
+    return 0;
+}
+
+__________________________________________________________________________________________
+67.Count the number of vowels :
+
+#include <iostream>
+using namespace std;
+int main(){
+    char a[100];
+    int count=0;
+    gets(a);
+    for(int i=0;a[i]!='\0';i++){
+        if(a[i]=='a'|| a[i]=='e' || a[i]=='i' || a[i]=='o' || a[i]=='u' || a[i]=='A' || a[i]=='E' || a[i]=='I' || a[i]=='O' || a[i]=='U'){
+            count++;
+        }        
+    }
+    cout<<count;
+    
+    return 0;
+}
+______________________________________________________________________________________________
+68.Remove the vowels from a String :
+
+#include <iostream>
+#include<string.h>
+using namespace std;
+int main(){
+    char a[100];
+    int len=0;
+    gets(a);
+    len=strlen(a);
+    for(int i=0;i<len;i++){
+        if(a[i]=='a'|| a[i]=='e' || a[i]=='i' || a[i]=='o' || a[i]=='u' || a[i]=='A' || a[i]=='E' || a[i]=='I' || a[i]=='O' || a[i]=='U'){
+            for(int j=i;j<len;j++){
+                a[j]=a[j+1];
+            }
+            i--;
+            len--;
+        }        
+    }
+    cout<<a;
+    return 0;
+}
+____________________________________________________________________________________________
+69.Check if the given string is Palindrome or not :
+
+#include <iostream>
+#include<string.h>
+using namespace std;
+int main(){
+    char a[100];
+    int i,flag=0;
+    gets(a);
+    int len=strlen(a);
+    for(i=0;i<len/2;i++){
+        if(a[i]==a[len-i-1]){
+            flag++;
+        }
+        
+    }
+    if(flag==i){
+        cout<<"Given string is string is Palindrome";
+    }
+    else{
+        cout<<"Not palindrome";
+    }
+    return 0;
+}
+_____________________________________________________________________________________
+70.Print the given string in reverse order :
+
+#include <iostream>
+#include<string.h>
+using namespace std;
+int main(){
+    char a[100],ch;
+    int i;
+    gets(a);
+    int len=strlen(a);
+    for(i=0;i<len/2;i++){
+        ch=a[i];
+        a[i]=a[len-i-1];
+        a[len-i-1]=ch;
+    }
+    cout<<a;
+    return 0;
+}
+____________________________________________________________________________________
+71.Remove all characters from string except alphabets :
+
+#include <iostream>
+#include<string.h>
+using namespace std;
+int main(){
+    char a[100];
+    int i,j;
+    gets(a);
+    int len=strlen(a);
+    for(i=0;i<len;i++){
+        while(!((a[i]>='a' && a[i]<='z') || (a[i]>='A' && a[i]<='Z') || a[i]=='\0')){
+            for(j=i;j<len;j++){
+                a[j]=a[j+1];
+            }
+            a[j]='\0';
+        }
+    }
+    cout<<a;
+    return 0;
+}
+
+_____________________________________________________________________________________
+72. remove spaces from a string
+
+#include <iostream>
+#include<string.h>
+using namespace std;
+int main(){
+    char str1[100],str2[100];
+    int i=0,j=0;
+    gets(str1);
+    while (str1[i]!='\0')
+    {
+        if (str1[i]!=' ')
+        {
+            str2[j++]=str1[i];
+        }
+        i++;       
+    }
+    str2[j]='\0';
+    cout<<str2;   
+    return 0;
+}
+____________________________________________________________________________________
+73.Remove brackets from an algebraic expression : 
+
+#include <iostream>
+#include<string.h>
+using namespace std;
+int main(){
+    char str1[100],str2[100];
+    int i=0,j=0;
+    gets(str1);
+    while (str1[i]!='\0')
+    {
+        if (str1[i]!='(' && str1[i]!=')'){
+            str2[j++]=str1[i];
+        }
+        i++;       
+    }
+    str2[j]='\0';
+    cout<<str2;   
+    return 0;
+}
+____________________________________________________________________________________
+74.Count the sum of numbers in a string : 
+
+#include <iostream>
+#include<string.h>
+using namespace std;
+int main(){
+    char str1[100];
+    int i,sum=0;
+    gets(str1);
+    for(i=0;str1[i]!='\0';i++){
+        if(str1[i]>='0' && str1[i]<='9'){
+            sum=sum+str1[i]-'0';
+        }
+    }
+    cout<<sum;
+    return 0;
+}
+____________________________________________________________________________________
+75.Capitalize the first and last character of each word of a string :
+
+#include <iostream>
+#include<string.h>
+using namespace std;
+int main(){
+    char str[100];
+    int i;
+    gets(str);
+    int length=strlen(str);
+    for(i=0;i<length;i++){
+        if(i==0||i==(length-1)) //Conerting character at first and last index to uppercase.
+        {
+            str[i]=toupper(str[i]);
+        }
+        else if(str[i]==' ')//Conerting characters present before and after space to uppercase.
+        {
+            str[i-1]=toupper(str[i-1]);
+            str[i+1]=toupper(str[i+1]);
+        }
+    }
+    cout<<str;   
+    return 0;
+}
+______________________________________________________________________________________________
+76.Calculate frequency of characters in a string :
+
+#include <iostream>
+#include<string.h>
+using namespace std;
+int main(){
+    char str[100];
+    int i;
+    int freq[256] = {0};
+    
+    //Accepting inputs.
+    cout<<"Enter the string: ";
+    gets(str);
+    
+    //Calculating frequency of each character.
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        freq[str[i]]++;
+    }
+    
+    //Printing frequency of each character.
+    for(i = 0; i < 256; i++)
+    {
+        if(freq[i] != 0)
+        {
+           cout<<"The frequency of "<<char(i)<<" is "<<freq[i]<<endl;
+        }
+    }  
+    return 0;
+}
+______________________________________________________________________________________________
+77.Finding non repeating characters in a string.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    //Initializing variables.
+    char str[100];
+    int i;
+    int freq[256] = {0};    
+    //Accepting inputs.
+    cout<<"Enter the string: ";
+    gets(str);
+    //Calculating frequency of each character.
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        freq[str[i]]++;
+    }
+    cout<<"The non repeating characters are: ";
+    for(i = 0; i < 256; i++)
+    {
+        if(freq[i] == 1)//Finding non repeating charcters and printing them.
+        {
+           cout<<char(i)<<"  " ;
+        }
+    }
+    return 0;
+}
+___________________________________________________________________________________
+78.C++ programming code to check if two strings are anagram or not
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    //Initializing variables.
+    char str1[100],str2[100];
+    int first[26]={0}, second[26]={0}, c=0, flag=0; 
+    //Accepting inputs.
+    cout<<"Enter First String: ";
+    gets(str1);
+    cout<<"Enter Second String: ";
+    gets(str2);   
+    //Calculating frequencies of characters in first string.
+    while(str1[c] != '\0')
+    {
+        first[str1[c]-'a']++;
+        c++;
+    }     
+    c=0;
+    //Calculating frequencies of characters in second string. 
+    while(str2[c] != '\0')
+    {
+        second[str2[c]-'a']++;
+        c++;
+    }
+    //Checking if frequencies of both the strings are same or not.
+    for(c=0;c<26;c++)
+    {
+        if(first[c] != second[c])
+            flag=1;
+    }
+    //Priting result.
+    if(flag == 0)
+    {
+        cout<<"Strings are anagram.";
+    }
+    else
+    {
+        cout<<"Strings are not anagram.";
+    }
+    return 0;
+}
+__________________________________________________________________________________
+**********************************************************************************
+
+
+
+
